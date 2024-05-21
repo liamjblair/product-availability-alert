@@ -6,7 +6,7 @@ This is a simple Python project designed to monitor the availability of a specif
 
 ## Skills/Technolgies
 
-Python / Apache Airflow / Docker-Compose / Selenium BeautifulSoup / SMTLIB / Logging
+Python / Apache Airflow / Docker-Compose / Selenium / BeautifulSoup / SMTLIB / Logging
 ## Features
 
 Uses Selenium and BeautifulSoup for web scraping to check the product availability.
