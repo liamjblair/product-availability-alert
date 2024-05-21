@@ -1,0 +1,118 @@
+2024-05-20 22:17:50,581 - DEBUG - Selenium Manager binary found at: C:\Users\liamj\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe
+2024-05-20 22:17:50,581 - DEBUG - Executing process: C:\Users\liamj\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --debug --language-binding python --output json
+2024-05-20 22:17:55,203 - DEBUG - Sending stats to Plausible: Props { browser: "chrome", browser_version: "", os: "windows", arch: "amd64", lang: "python", selenium_version: "4.19" }
+2024-05-20 22:17:55,203 - DEBUG - chromedriver not found in PATH
+2024-05-20 22:17:55,203 - DEBUG - chrome detected at C:\Program Files\Google\Chrome\Application\chrome.exe
+2024-05-20 22:17:55,203 - DEBUG - Running command: wmic datafile where name='C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe' get Version /value
+2024-05-20 22:17:55,203 - DEBUG - Output: "\r\r\n\r\r\nVersion=124.0.6367.203\r\r\n\r\r\n\r\r\n\r"
+2024-05-20 22:17:55,203 - DEBUG - Detected browser: chrome 124.0.6367.203
+2024-05-20 22:17:55,203 - DEBUG - Discovering versions from https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json
+2024-05-20 22:17:55,203 - DEBUG - Required driver: chromedriver 124.0.6367.207
+2024-05-20 22:17:55,203 - DEBUG - Downloading chromedriver 124.0.6367.207 from https://storage.googleapis.com/chrome-for-testing-public/124.0.6367.207/win64/chromedriver-win64.zip
+2024-05-20 22:17:55,203 - DEBUG - Driver path: C:\Users\liamj\.cache\selenium\chromedriver\win64\124.0.6367.207\chromedriver.exe
+2024-05-20 22:17:55,203 - DEBUG - Browser path: C:\Program Files\Google\Chrome\Application\chrome.exe
+2024-05-20 22:17:55,203 - DEBUG - Using driver at: C:\Users\liamj\.cache\selenium\chromedriver\win64\124.0.6367.207\chromedriver.exe
+2024-05-20 22:17:55,437 - DEBUG - Started executable: `C:\Users\liamj\.cache\selenium\chromedriver\win64\124.0.6367.207\chromedriver.exe` in a child process with pid: 135812 using 0 to output -3
+2024-05-20 22:17:55,948 - DEBUG - POST http://localhost:50939/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'browserVersion': None, 'goog:chromeOptions': {'extensions': [], 'binary': 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe', 'args': []}}}}
+2024-05-20 22:17:55,948 - DEBUG - Starting new HTTP connection (1): localhost:50939
+2024-05-20 22:17:56,579 - DEBUG - http://localhost:50939 "POST /session HTTP/1.1" 200 0
+2024-05-20 22:17:56,580 - DEBUG - Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"124.0.6367.203","chrome":{"chromedriverVersion":"124.0.6367.207 (a9001a6e39fbaa559510ca866052950457dd4e6b-refs/branch-heads/6367_201@{#3})","userDataDir":"C:\\Users\\liamj\\AppData\\Local\\Temp\\scoped_dir135812_274446902"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:50952"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"c5a24e6dcdc7daf2817db9c31df451db"}} | headers=HTTPHeaderDict({'Content-Length': '885', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-05-20 22:17:56,580 - DEBUG - Finished Request
+2024-05-20 22:17:56,580 - DEBUG - POST http://localhost:50939/session/c5a24e6dcdc7daf2817db9c31df451db/url {'url': 'https://www.varusteleka.com/en/product/terava-skrama-240-carbon-steel/30189'}
+2024-05-20 22:17:59,488 - DEBUG - http://localhost:50939 "POST /session/c5a24e6dcdc7daf2817db9c31df451db/url HTTP/1.1" 200 0
+2024-05-20 22:17:59,488 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-05-20 22:17:59,488 - DEBUG - Finished Request
+2024-05-20 22:18:04,489 - DEBUG - GET http://localhost:50939/session/c5a24e6dcdc7daf2817db9c31df451db/source {}
+2024-05-20 22:18:04,510 - DEBUG - http://localhost:50939 "GET /session/c5a24e6dcdc7daf2817db9c31df451db/source HTTP/1.1" 200 0
+2024-05-20 22:18:04,608 - DEBUG - Finished Request
+2024-05-20 22:18:04,631 - DEBUG - DELETE http://localhost:50939/session/c5a24e6dcdc7daf2817db9c31df451db {}
+2024-05-20 22:18:04,670 - DEBUG - http://localhost:50939 "DELETE /session/c5a24e6dcdc7daf2817db9c31df451db HTTP/1.1" 200 0
+2024-05-20 22:18:04,670 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-05-20 22:18:04,670 - DEBUG - Finished Request
+2024-05-20 22:20:36,477 - DEBUG - Selenium Manager binary found at: C:\Users\liamj\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe
+2024-05-20 22:20:36,477 - DEBUG - Executing process: C:\Users\liamj\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --debug --language-binding python --output json
+2024-05-20 22:20:36,743 - DEBUG - chromedriver not found in PATH
+2024-05-20 22:20:36,743 - DEBUG - chrome detected at C:\Program Files\Google\Chrome\Application\chrome.exe
+2024-05-20 22:20:36,743 - DEBUG - Running command: wmic datafile where name='C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe' get Version /value
+2024-05-20 22:20:36,743 - DEBUG - Output: "\r\r\n\r\r\nVersion=124.0.6367.203\r\r\n\r\r\n\r\r\n\r"
+2024-05-20 22:20:36,743 - DEBUG - Detected browser: chrome 124.0.6367.203
+2024-05-20 22:20:36,743 - DEBUG - Required driver: chromedriver 124.0.6367.207
+2024-05-20 22:20:36,743 - DEBUG - chromedriver 124.0.6367.207 already in the cache
+2024-05-20 22:20:36,743 - DEBUG - Driver path: C:\Users\liamj\.cache\selenium\chromedriver\win64\124.0.6367.207\chromedriver.exe
+2024-05-20 22:20:36,743 - DEBUG - Browser path: C:\Program Files\Google\Chrome\Application\chrome.exe
+2024-05-20 22:20:36,743 - DEBUG - Using driver at: C:\Users\liamj\.cache\selenium\chromedriver\win64\124.0.6367.207\chromedriver.exe
+2024-05-20 22:20:36,852 - DEBUG - Started executable: `C:\Users\liamj\.cache\selenium\chromedriver\win64\124.0.6367.207\chromedriver.exe` in a child process with pid: 137724 using 0 to output -3
+2024-05-20 22:20:37,369 - DEBUG - POST http://localhost:51187/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'browserVersion': None, 'goog:chromeOptions': {'extensions': [], 'binary': 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe', 'args': []}}}}
+2024-05-20 22:20:37,371 - DEBUG - Starting new HTTP connection (1): localhost:51187
+2024-05-20 22:20:37,954 - DEBUG - http://localhost:51187 "POST /session HTTP/1.1" 200 0
+2024-05-20 22:20:37,954 - DEBUG - Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"124.0.6367.203","chrome":{"chromedriverVersion":"124.0.6367.207 (a9001a6e39fbaa559510ca866052950457dd4e6b-refs/branch-heads/6367_201@{#3})","userDataDir":"C:\\Users\\liamj\\AppData\\Local\\Temp\\scoped_dir137724_1340164832"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:51192"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"713a996849a32779ad6383c7bb0491c0"}} | headers=HTTPHeaderDict({'Content-Length': '886', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-05-20 22:20:37,954 - DEBUG - Finished Request
+2024-05-20 22:20:37,954 - DEBUG - POST http://localhost:51187/session/713a996849a32779ad6383c7bb0491c0/url {'url': 'https://www.varusteleka.com/en/product/terava-skrama-240-carbon-steel/30189'}
+2024-05-20 22:20:40,273 - DEBUG - http://localhost:51187 "POST /session/713a996849a32779ad6383c7bb0491c0/url HTTP/1.1" 200 0
+2024-05-20 22:20:40,273 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-05-20 22:20:40,273 - DEBUG - Finished Request
+2024-05-20 22:20:45,274 - DEBUG - GET http://localhost:51187/session/713a996849a32779ad6383c7bb0491c0/source {}
+2024-05-20 22:20:45,288 - DEBUG - http://localhost:51187 "GET /session/713a996849a32779ad6383c7bb0491c0/source HTTP/1.1" 200 0
+2024-05-20 22:20:45,365 - DEBUG - Finished Request
+2024-05-20 22:20:45,390 - DEBUG - DELETE http://localhost:51187/session/713a996849a32779ad6383c7bb0491c0 {}
+2024-05-20 22:20:45,442 - DEBUG - http://localhost:51187 "DELETE /session/713a996849a32779ad6383c7bb0491c0 HTTP/1.1" 200 0
+2024-05-20 22:20:45,443 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-05-20 22:20:45,443 - DEBUG - Finished Request
+2024-05-20 22:23:09,502 - DEBUG - Selenium Manager binary found at: C:\Users\liamj\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe
+2024-05-20 22:23:09,502 - DEBUG - Executing process: C:\Users\liamj\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --debug --language-binding python --output json
+2024-05-20 22:23:09,756 - DEBUG - chromedriver not found in PATH
+2024-05-20 22:23:09,756 - DEBUG - chrome detected at C:\Program Files\Google\Chrome\Application\chrome.exe
+2024-05-20 22:23:09,756 - DEBUG - Running command: wmic datafile where name='C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe' get Version /value
+2024-05-20 22:23:09,756 - DEBUG - Output: "\r\r\n\r\r\nVersion=124.0.6367.203\r\r\n\r\r\n\r\r\n\r"
+2024-05-20 22:23:09,757 - DEBUG - Detected browser: chrome 124.0.6367.203
+2024-05-20 22:23:09,757 - DEBUG - Required driver: chromedriver 124.0.6367.207
+2024-05-20 22:23:09,757 - DEBUG - chromedriver 124.0.6367.207 already in the cache
+2024-05-20 22:23:09,757 - DEBUG - Driver path: C:\Users\liamj\.cache\selenium\chromedriver\win64\124.0.6367.207\chromedriver.exe
+2024-05-20 22:23:09,757 - DEBUG - Browser path: C:\Program Files\Google\Chrome\Application\chrome.exe
+2024-05-20 22:23:09,757 - DEBUG - Using driver at: C:\Users\liamj\.cache\selenium\chromedriver\win64\124.0.6367.207\chromedriver.exe
+2024-05-20 22:23:09,850 - DEBUG - Started executable: `C:\Users\liamj\.cache\selenium\chromedriver\win64\124.0.6367.207\chromedriver.exe` in a child process with pid: 101136 using 0 to output -3
+2024-05-20 22:23:10,377 - DEBUG - POST http://localhost:51315/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'browserVersion': None, 'goog:chromeOptions': {'extensions': [], 'binary': 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe', 'args': []}}}}
+2024-05-20 22:23:10,377 - DEBUG - Starting new HTTP connection (1): localhost:51315
+2024-05-20 22:23:11,037 - DEBUG - http://localhost:51315 "POST /session HTTP/1.1" 200 0
+2024-05-20 22:23:11,037 - DEBUG - Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"124.0.6367.203","chrome":{"chromedriverVersion":"124.0.6367.207 (a9001a6e39fbaa559510ca866052950457dd4e6b-refs/branch-heads/6367_201@{#3})","userDataDir":"C:\\Users\\liamj\\AppData\\Local\\Temp\\scoped_dir101136_1980568717"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:51319"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"0eac9628f0a3ec7f7d2efd991a7b0d14"}} | headers=HTTPHeaderDict({'Content-Length': '886', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-05-20 22:23:11,037 - DEBUG - Finished Request
+2024-05-20 22:23:11,037 - DEBUG - POST http://localhost:51315/session/0eac9628f0a3ec7f7d2efd991a7b0d14/url {'url': 'https://www.varusteleka.com/en/product/terava-skrama-240-carbon-steel/30189'}
+2024-05-20 22:23:14,252 - DEBUG - http://localhost:51315 "POST /session/0eac9628f0a3ec7f7d2efd991a7b0d14/url HTTP/1.1" 200 0
+2024-05-20 22:23:14,252 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-05-20 22:23:14,252 - DEBUG - Finished Request
+2024-05-20 22:23:19,253 - DEBUG - GET http://localhost:51315/session/0eac9628f0a3ec7f7d2efd991a7b0d14/source {}
+2024-05-20 22:23:19,267 - DEBUG - http://localhost:51315 "GET /session/0eac9628f0a3ec7f7d2efd991a7b0d14/source HTTP/1.1" 200 0
+2024-05-20 22:23:19,330 - DEBUG - Finished Request
+2024-05-20 22:23:19,354 - DEBUG - DELETE http://localhost:51315/session/0eac9628f0a3ec7f7d2efd991a7b0d14 {}
+2024-05-20 22:23:19,390 - DEBUG - http://localhost:51315 "DELETE /session/0eac9628f0a3ec7f7d2efd991a7b0d14 HTTP/1.1" 200 0
+2024-05-20 22:23:19,390 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-05-20 22:23:19,390 - DEBUG - Finished Request
+2024-05-20 22:24:00,777 - DEBUG - Selenium Manager binary found at: C:\Users\liamj\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe
+2024-05-20 22:24:00,777 - DEBUG - Executing process: C:\Users\liamj\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --debug --language-binding python --output json
+2024-05-20 22:24:01,018 - DEBUG - chromedriver not found in PATH
+2024-05-20 22:24:01,018 - DEBUG - chrome detected at C:\Program Files\Google\Chrome\Application\chrome.exe
+2024-05-20 22:24:01,018 - DEBUG - Running command: wmic datafile where name='C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe' get Version /value
+2024-05-20 22:24:01,018 - DEBUG - Output: "\r\r\n\r\r\nVersion=124.0.6367.203\r\r\n\r\r\n\r\r\n\r"
+2024-05-20 22:24:01,018 - DEBUG - Detected browser: chrome 124.0.6367.203
+2024-05-20 22:24:01,018 - DEBUG - Required driver: chromedriver 124.0.6367.207
+2024-05-20 22:24:01,018 - DEBUG - chromedriver 124.0.6367.207 already in the cache
+2024-05-20 22:24:01,018 - DEBUG - Driver path: C:\Users\liamj\.cache\selenium\chromedriver\win64\124.0.6367.207\chromedriver.exe
+2024-05-20 22:24:01,018 - DEBUG - Browser path: C:\Program Files\Google\Chrome\Application\chrome.exe
+2024-05-20 22:24:01,018 - DEBUG - Using driver at: C:\Users\liamj\.cache\selenium\chromedriver\win64\124.0.6367.207\chromedriver.exe
+2024-05-20 22:24:01,110 - DEBUG - Started executable: `C:\Users\liamj\.cache\selenium\chromedriver\win64\124.0.6367.207\chromedriver.exe` in a child process with pid: 140008 using 0 to output -3
+2024-05-20 22:24:01,616 - DEBUG - POST http://localhost:51390/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'browserVersion': None, 'goog:chromeOptions': {'extensions': [], 'binary': 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe', 'args': []}}}}
+2024-05-20 22:24:01,617 - DEBUG - Starting new HTTP connection (1): localhost:51390
+2024-05-20 22:24:02,255 - DEBUG - http://localhost:51390 "POST /session HTTP/1.1" 200 0
+2024-05-20 22:24:02,255 - DEBUG - Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"124.0.6367.203","chrome":{"chromedriverVersion":"124.0.6367.207 (a9001a6e39fbaa559510ca866052950457dd4e6b-refs/branch-heads/6367_201@{#3})","userDataDir":"C:\\Users\\liamj\\AppData\\Local\\Temp\\scoped_dir140008_1381104685"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:51394"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"69ba05764876f1f5515779258059e452"}} | headers=HTTPHeaderDict({'Content-Length': '886', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-05-20 22:24:02,255 - DEBUG - Finished Request
+2024-05-20 22:24:02,255 - DEBUG - POST http://localhost:51390/session/69ba05764876f1f5515779258059e452/url {'url': 'https://www.varusteleka.com/en/product/terava-skrama-240-carbon-steel/30189'}
+2024-05-20 22:24:04,184 - DEBUG - http://localhost:51390 "POST /session/69ba05764876f1f5515779258059e452/url HTTP/1.1" 200 0
+2024-05-20 22:24:04,185 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-05-20 22:24:04,185 - DEBUG - Finished Request
+2024-05-20 22:24:09,185 - DEBUG - GET http://localhost:51390/session/69ba05764876f1f5515779258059e452/source {}
+2024-05-20 22:24:09,200 - DEBUG - http://localhost:51390 "GET /session/69ba05764876f1f5515779258059e452/source HTTP/1.1" 200 0
+2024-05-20 22:24:09,277 - DEBUG - Finished Request
+2024-05-20 22:24:09,304 - DEBUG - DELETE http://localhost:51390/session/69ba05764876f1f5515779258059e452 {}
+2024-05-20 22:24:09,348 - DEBUG - http://localhost:51390 "DELETE /session/69ba05764876f1f5515779258059e452 HTTP/1.1" 200 0
+2024-05-20 22:24:09,348 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-05-20 22:24:09,348 - DEBUG - Finished Request
