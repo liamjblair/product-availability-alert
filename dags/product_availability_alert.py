@@ -13,15 +13,15 @@ dag_args ={
         }
 
 dag = DAG (
-    dag_id="random_user_api",
+    dag_id="product_availability_alert",
     schedule_interval="@daily",
     default_args=dag_args,
     catchup=False,
-    description="random_user_api"
+    description="product_availability_alert"
 )
 
 task = PythonOperator(
-        task_id="gather_user_data",
+        task_id="product_availability_alert_run",
         python_callable=run,
         dag=dag
     )

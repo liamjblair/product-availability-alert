@@ -1,5 +1,5 @@
-from product_availability_alert import AvailabilityCheck
-import constants
+from src.product_availability_alert import AvailabilityCheck
+from src import constants
 
 def run():
     # product of interest

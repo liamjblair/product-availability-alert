@@ -1,21 +1,30 @@
 from selenium import webdriver
-import requests
-import constants
+from src import constants
 import time
 from bs4 import BeautifulSoup
 import smtplib
-import logger
+from src import logger
 
 
-class AvailabilityAlert:
+class AvailabilityCheck:
 
     def __init__(self, url) -> None:
         self.url = url
 
     def parse_url(self) -> str:
+
+        """
+        Parses the HTML content of the URL using Selenium WebDriver and BeautifulSoup.
+
+        This method uses Selenium WebDriver to retrieve the HTML content of the URL 
+        and then parses it using BeautifulSoup to extract structured data. The parsed 
+        content is stored in the 'results' attribute of the class instance.
+        
+        """
+
         try:
             web_driver = webdriver.Chrome()
-            web_driver.get(url)
+            web_driver.get(self.url)
             time.sleep(5) 
             source = web_driver.page_source
             self.results = BeautifulSoup(source, "html.parser")
@@ -27,13 +36,31 @@ class AvailabilityAlert:
                 web_driver.quit()
 
     def check_availability(self) -> bool:
-        # search_string = "Unfortunately we are unable to deliver to the UK at this time."
-        search_string="The Skrama is a versatile heavy-duty bush knife"
+
+        """ 
+        Checks if the specified string is found in the HTML document.
+
+        This method searches for the specified string within the parsed HTML document
+        obtained from the URL. If the string is not found, it returns False, indicating that
+        the product is available. If the string is found, it returns True, indicating that
+        shipping to the UK may still be unavailable.
+                    
+        """
+
+        search_string = "Unfortunately we are unable to ship to the UK at this time."
         found_string = self.results.find_all(string=lambda text: search_string in text)
-        if found_string:
+        if not found_string:
             self.send_email_alert()
 
     def send_email_alert(self):
+
+        """
+        Creates the SMTLIB connection witht the users email address and password. 
+        If the return value of check_availability is False, we send an email alert 
+        to the user including the link asking them to comfirm if delivery to the UK
+        is now available.
+        
+        """
         # SMTP server configuration
         smtp_server = constants.SMTLIB_SERVER
         smtp_port = constants.SMTLIB_PORT
@@ -67,11 +94,3 @@ class AvailabilityAlert:
             logger.error(f"An error occurred while sending the email: {e}.")
         except Exception as e:
             logger.error(f"An unexpected error occurred: {e}.")
-
-
-# product of interest
-product = constants.PRODUCT
-url = f"https://www.varusteleka.com/en/{product}"
-availability = AvailabilityAlert(url)
-availability.parse_url()
-availability.check_availability()
